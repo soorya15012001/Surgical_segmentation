@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>main</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="style2.css">
+	<style type="text/css">
+		
+		.loader {
+  border: 16px solid #f3f3f3;
+  border-radius: 50%;
+  border-top: 16px solid #3498db;
+  width: 120px;
+  height: 120px;
+  -webkit-animation: spin 2s linear infinite; /* Safari */
+  animation: spin 2s linear infinite;
+}
+
+/* Safari */
+@-webkit-keyframes spin {
+  0% { -webkit-transform: rotate(0deg); }
+  100% { -webkit-transform: rotate(360deg); }
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+
+
+	</style>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<script src="thing.js"></script>
+	<script src="thing2.js"></script>
+	<script>
+var i = 0;
+var txt = 'SIETS';
+var speed = 200;
+
+function typeWriter() {
+    if (i < txt.length) {
+    document.getElementById("demo").innerHTML += txt.charAt(i);
+    i++;
+    setTimeout(typeWriter, speed);
+  }
+}
+
+function display(){
+	  document.getElementById("but").remove();
+
+	var delayInMilliseconds = 1500; //1 second
+
+setTimeout(function() {
+	document.getElementById("demo1").innerHTML += 
+	"<div class='uploadOuter' id='draggy'><br/><span class='dragBox'>Drag and Drop image<input type='file' onChange='dragNdrop(event)'  ondragover='drag()' ondrop='drop()' id='uploadFile' style='font-size: 10px;' /></span></div><div id='bor'></div><div id='preview'></div><br/>";}, delayInMilliseconds);
+
+
+}
+
+function button(){
+	var delayInMilliseconds = 1100; //1 second
+
+	setTimeout(function() {
+	document.getElementById("switch").innerHTML += "<form><input type='checkbox' name='lever' class='lever pristine' id='lever' value='lever value' role='switch' aria-label='lever' aria-checked='false'><label for='lever'><span>On</span></label><label for='lever'><span>Off</span></label></form>";}, delayInMilliseconds);
+
+
+}
+
+
+
+
+
+
+</script>
+</head>
+<body style="background-color: green">
+
+<div class="crt"></div>	
+
+<!-- <div class="loader"></div>
+ -->
+<center><button id="but" onclick="typeWriter(), display(), button()" style="background-color: none; margin-top: 200px; border-radius: 150px; border:5px solid black; box-shadow: 10px 10px 20px black"><i class="fa fa-power-off" style="font-size:300px;color:red; "></i>
+</button></center>
+<center><i><b><p id="demo" style="color: yellow; font-size: 90px; margin-top: 10px; text-shadow: 5px 5px 5px black; box-shadow: 10px 10px 20px black"></p></b></i></center>
+<div id="switch" style='position: relative; margin-top: 90px; margin-left: 1100px; '></div>
+
+<center><p id="demo1" style="margin-top: -50px;"></p></center>
+
+
+
+</body>
+</html>
