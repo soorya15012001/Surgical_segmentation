@@ -9,3 +9,5 @@ Segmentation Model :- https://drive.google.com/file/d/1b-GjqWGGmFSU7gZdQiRFIGQXH
 
 Data Set :- https://drive.google.com/file/d/1ULlna-rv6yuvuefpigiEyHVZJaBMzDOw/view?usp=sharing
 
+To run the UI - Open "index.html" in SIETS folder in browser
+
