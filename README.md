@@ -17,3 +17,4 @@ To run the SIETS system -
 1) Open terminal and run server.py
 2) Open another terminal and run test_voice.py
 
+I've removed the test.py and test_voice.py files for privacy reasons.
